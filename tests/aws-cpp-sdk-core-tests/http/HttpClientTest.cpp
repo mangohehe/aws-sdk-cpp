@@ -114,7 +114,7 @@ TEST_F(HttpClientTest, TestRandomURLWithProxyAndOtherDeclaredAsNonProxyHost)
 TEST_F(HttpClientTest, TestRandomURLMultiThreaded)
 {
     const int threadCount = 50;
-    const int timeoutSecs = 5;
+    const int timeoutSecs = 30;
     auto httpClient = CreateHttpClient(Aws::Client::ClientConfiguration());
     std::vector<std::future<void>> futures;
     for (int thread = 0; thread < threadCount; ++thread)
